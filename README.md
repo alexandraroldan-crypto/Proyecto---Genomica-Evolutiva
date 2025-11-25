@@ -36,25 +36,18 @@ Se realizará un análisis evolutivo de géneros de orquídeas presentes en el d
 1. **Descarga de datos**
    - Descarga de genomas cloroplastidiales
    - Obtener genomas completos desde NCBI (Entrez / datasets).
-
 2. **Extracción de CDS**
    - Extraer todos los coding sequences (CDS) de cada genoma y organizarlos por locus en FASTA individuales.
-
 3. **Control de calidad**
    - Filtrar secuencias por longitud, ambigüedades y duplicados por especie.
-
 4. **Alineamiento por locus**
    - Alinear cada archivo de CDS con MAFFT.
-
 5. **Limpieza del alineamiento**
    - Recortar extremos con gaps, revisar marcos de lectura y uniformidad.
-
 6. **Cálculo de variabilidad**
    - Obtener métricas por locus: sitios variables, π, p-distance, % identidad, cobertura.
-
 7. **Filogenias por CDS**
    - Construir árboles con IQ-TREE para evaluar poder resolutivo por locus.
-
 8. **Identificación de regiones candidatas para amplicones**
    - Analizar ventanas deslizantes para localizar zonas conservadas (cebadores) y regiones internas variables (discriminación).
 
