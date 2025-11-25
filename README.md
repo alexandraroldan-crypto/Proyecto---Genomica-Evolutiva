@@ -5,13 +5,12 @@ Se realizará un análisis evolutivo de géneros de orquídeas centrado en regio
 
 Proyección del trabajo
 
-• 	Compilar lista de géneros de orquídeas reportados en San Martín y obtener secuencias cloroplastidiales disponibles en NCBI para esos géneros.
-• 	Extraer todos los CDS presentes en los genomas cloroplastidiales descargados y organizar por locus (un archivo FASTA por CDS que contenga todas las muestras disponibles).
-• 	Realizar alineamientos múltiples locus-por-locus (MAFFT) y análisis de variabilidad (sítios variables, π, distancia media, %identidad).
-• 	Identificar regiones conservadas flanqueantes a zonas variables y sugerir posiciones/longitudes de amplicones útiles para diseño de cebadores.
-• 	Evaluar potencia de discriminación (resolución taxonómica) de cada CDS mediante árboles (IQ-TREE) y métricas de monofilia / soporte.
-• 	Proveer recomendaciones de loci candidatos para barcoding en orquídeas (priorizando balance entre variabilidad y longitud/amplificabilidad).
-
+- Compilar una lista de géneros de orquídeas presentes en San Martín y obtener las secuencias cloroplastidiales disponibles en NCBI para esos géneros.
+- Extraer todos los CDS de los genomas cloroplastidiales descargados y organizarlos por locus (un archivo FASTA por CDS con todas las muestras disponibles).
+- Realizar alineamientos múltiples locus-por-locus con MAFFT y calcular métricas de variabilidad (sitios variables, π, distancia media, % de identidad).
+- Identificar regiones conservadas que flanquean zonas variables y sugerir posiciones y longitudes de amplicones adecuados para diseño de cebadores.
+- Evaluar la capacidad de discriminación taxonómica de cada CDS mediante árboles filogenéticos construidos con IQ-TREE y análisis de monofilia/soportes.
+- Proporcionar recomendaciones finales de loci candidatos para códigos de barras en orquídeas, priorizando el equilibrio entre variabilidad, amplificabilidad y longitud.
 
 ## 🎯 Objetivos
 
