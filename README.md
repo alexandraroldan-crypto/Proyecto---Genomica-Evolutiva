@@ -1,25 +1,23 @@
 # Proyecto---Genomica-Evolutiva
+## Evaluación de regiones codificantes (CDS) del genoma cloroplastidial como loci de barcoding para orquídeas del departamento de San Martín, Perú
 
-Las orquídeas constituyen una de las familias más diversas y abundantes dentro de las angiospermas. En Perú, su presencia es especialmente significativa, con una alta concentración de especies en la región de San Martín, considerada uno de los principales centros de diversidad para este grupo vegetal.
-Este proyecto tiene como objetivo realizar un análisis evolutivo de los géneros de orquídeas presentes en San Martín, utilizando datos genómicos disponibles en el repositorio NCBI. El enfoque estará centrado en el estudio del genoma cloroplastidial, dada su utilidad en reconstrucciones filogenéticas y en la comprensión de relaciones evolutivas entre especies.
+Se realizará un análisis evolutivo de géneros de orquídeas centrado en regiones codificantes (CDS) del genoma cloroplastidial. El objetivo principal será evaluar la capacidad de distintos CDS para servir como zonas de amplicón (barcoding): medir variabilidad entre especies, identificar zonas conservadas para diseño de cebadores y proponer loci candidatos para estudios de identificación y filogenia.
 
 Proyección del trabajo
 
-• 	Recolección de datos: Identificación de géneros reportados en San Martín y descarga de secuencias cloroplastidiales desde NCBI.
-
-• 	Análisis filogenético: Alineamiento de secuencias, construcción de árboles evolutivos y evaluación de divergencias genéticas.
+• 	Compilar lista de géneros de orquídeas reportados en San Martín y obtener secuencias cloroplastidiales disponibles en NCBI para esos géneros.
+• 	Extraer todos los CDS presentes en los genomas cloroplastidiales descargados y organizar por locus (un archivo FASTA por CDS que contenga todas las muestras disponibles).
+• 	Realizar alineamientos múltiples locus-por-locus (MAFFT) y análisis de variabilidad (sítios variables, π, distancia media, %identidad).
+• 	Identificar regiones conservadas flanqueantes a zonas variables y sugerir posiciones/longitudes de amplicones útiles para diseño de cebadores.
+• 	Evaluar potencia de discriminación (resolución taxonómica) de cada CDS mediante árboles (IQ-TREE) y métricas de monofilia / soporte.
+• 	Proveer recomendaciones de loci candidatos para barcoding en orquídeas (priorizando balance entre variabilidad y longitud/amplificabilidad).
 
 
 ## 🎯 Objetivos
 
 ### Objetivo general
-Evaluar las relaciones evolutivas entre géneros de orquídeas presentes en San Martín mediante análisis filogenómicos basados en genomas cloroplastidiales.
+Se realizará un análisis evolutivo de géneros de orquídeas presentes en el departamento de San Martín (Perú) centrado en regiones codificantes (CDS) del genoma cloroplastidial. El objetivo principal será evaluar la capacidad de distintos CDS para servir como zonas de amplicón (barcoding): medir variabilidad entre especies, identificar zonas conservadas para diseño de cebadores y proponer loci candidatos para estudios de identificación y filogenia.
 
-### Objetivos específicos
-1. Identificar los géneros de orquídeas reportados para la región de San Martín.  
-2. Descargar genomas cloroplastidiales disponibles en NCBI correspondientes a dichos géneros.  
-3. Realizar alineamientos múltiples y construir árboles filogenéticos.  
-4. Evaluar la divergencia genética y las agrupaciones evolutivas resultantes.
 
 ---
 
@@ -27,9 +25,8 @@ Evaluar las relaciones evolutivas entre géneros de orquídeas presentes en San 
 
 - **Número de géneros esperados**: ~15–20  
 - **Número de especies por género**: variable (1–5, según disponibilidad en NCBI)  
-- **Tipo de datos**: Genomas cloroplastidiales completos o parciales (FASTA)  
+- **Tipo de datos**: Genomas cloroplastidiales completos (FASTA)  
 - **Fuente**: NCBI GenBank  
-- **Región de estudio**: Departamento de San Martín, Perú  
 
 ---
 
@@ -37,31 +34,30 @@ Evaluar las relaciones evolutivas entre géneros de orquídeas presentes en San 
 
 ### Etapas principales:
 1. **Descarga de datos**
-   - Uso de `Entrez` (Biopython) o `ncbi-datasets` para obtener secuencias cloroplastidiales.
-   - Script: `scripts/download_ncbi_chloroplast.py`.
+   - Descarga de genomas cloroplastidiales
+   - Obtener genomas completos desde NCBI (Entrez / datasets).
 
-2. **Procesamiento y alineamiento**
-   - Alineamiento con **MAFFT** (`scripts/align_sequences.sh`).
-   - Limpieza y concatenación con **AMAS** (`scripts/concat_alignment.py`).
+2. **Extracción de CDS**
+   - Extraer todos los coding sequences (CDS) de cada genoma y organizarlos por locus en FASTA individuales.
 
-3. **Construcción de filogenias**
-   - Árbol filogenético con **IQ-TREE** (`scripts/build_tree_iqtree.sh`).
-   - Bootstrap automático (ultrafast) y selección de modelo.
+3. **Control de calidad**
+   - Filtrar secuencias por longitud, ambigüedades y duplicados por especie.
 
-4. **Visualización y análisis**
-   - Visualización con **ETE3**, **iTOL** o **FigTree**.
-   - Análisis exploratorio en Jupyter Notebooks (`notebook/visualizacion_arboles.ipynb`).
+4. **Alineamiento por locus**
+   - Alinear cada archivo de CDS con MAFFT.
+
+5. **Limpieza del alineamiento**
+   - Recortar extremos con gaps, revisar marcos de lectura y uniformidad.
+
+6. **Cálculo de variabilidad**
+   - Obtener métricas por locus: sitios variables, π, p-distance, % identidad, cobertura.
+
+7. **Filogenias por CDS**
+   - Construir árboles con IQ-TREE para evaluar poder resolutivo por locus.
+
+8. **Identificación de regiones candidatas para amplicones**
+   - Analizar ventanas deslizantes para localizar zonas conservadas (cebadores) y regiones internas variables (discriminación).
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/4368c929-1083-434f-a58c-f4bfbdcd0cca" />
 
 ---
-
-## 💻 Tecnologías y herramientas
-
-| Tipo | Herramienta / Lenguaje |
-|------|------------------------|
-| Descarga y manejo de datos | Python (Biopython, Pandas) |
-| Alineamientos | MAFFT |
-| Filogenia | IQ-TREE |
-| Concatenación | AMAS |
-| Automatización del flujo | Bash / Nextflow |
-| Visualización | Python (ETE3, Matplotlib) / iTOL |
-| Control de versiones | Git + GitHub |
