@@ -1,6 +1,5 @@
 # Proyecto---Genomica-Evolutiva
-## Evaluación de regiones codificantes (CDS) del genoma cloroplastidial como loci de barcoding para orquídeas del departamento de San Martín, Perú
-
+## Evaluación de regiones codificantes (CDS) del genoma cloroplastidial como loci de barcoding para orquídeas
 Se realizará un análisis evolutivo de géneros de orquídeas centrado en regiones codificantes (CDS) del genoma cloroplastidial. El objetivo principal será evaluar la capacidad de distintos CDS para servir como zonas de amplicón (barcoding): medir variabilidad entre especies, identificar zonas conservadas para diseño de cebadores y proponer loci candidatos para estudios de identificación y filogenia.
 
 Proyección del trabajo
