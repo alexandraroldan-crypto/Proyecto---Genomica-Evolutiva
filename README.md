@@ -5,7 +5,7 @@ Se realizará un análisis evolutivo de géneros de orquídeas centrado en regio
 
 Proyección del trabajo
 
-- Compilar una lista de géneros de orquídeas presentes en San Martín y obtener las secuencias cloroplastidiales disponibles en NCBI para esos géneros.
+- Compilar una lista de géneros de orquídeas y obtener las secuencias cloroplastidiales disponibles en NCBI para esos géneros.
 - Extraer todos los CDS de los genomas cloroplastidiales descargados y organizarlos por locus (un archivo FASTA por CDS con todas las muestras disponibles).
 - Realizar alineamientos múltiples locus-por-locus con MAFFT y calcular métricas de variabilidad (sitios variables, π, distancia media, % de identidad).
 - Identificar regiones conservadas que flanquean zonas variables y sugerir posiciones y longitudes de amplicones adecuados para diseño de cebadores.
