@@ -22,11 +22,20 @@ Desarrollar un pipeline bioinformático para la extracción, evaluación y organ
 ---
 
 ## ⚙️ Lenguajes y herramientas utilizados en el proyecto
+### Lenguaje
 - Bash
   Usado para automatización de flujos de trabajo, bucles de procesamiento masivo, conversión de formatos y ejecución encadenada de herramientas bioinformáticas.
 - Python 3
   Lenguaje principal para scripts personalizados. Bibliotecas utilizadas:
    - Biopython (módulos SeqIO, Entrez, AlignIO) — descarga desde NCBI, parsing de GenBank/FASTA, extracción precisa de regiones genéticas.
    - numpy: cálculos de distancias genéticas y diversidad nucleotídica (π).
+
+### Herramienta
+- NCBI / GenBank — descarga de secuencias de referencia (matK, rbcL, ITS, trnH-psbA)
+- SeqKit — filtrado, extracción y limpieza de secuencias (longitud, Ns, orientación)
+- MAFFT — alineamiento por locus (matK, rbcL, ITS, etc.)
+- IQ-TREE — inferencia filogenética y evaluación de soporte
+- AMAS — concatenación de loci por muestra
+- Python / Biopython — automatización de descargas, PCR in silico y análisis comparativos
 
 ---
