@@ -1,34 +1,35 @@
 # Proyecto---Genomica-Evolutiva
-## Evaluación de regiones codificantes (CDS) del genoma cloroplastidial como loci de barcoding para orquídeas
+
+## Pipeline bioinformático para la extracción y organización de secuencias degeneración de bases de referencia FASTA de códigos de barras cloroplásticos en plantas
 Se realizará un análisis evolutivo de géneros de orquídeas centrado en regiones codificantes (CDS) del genoma cloroplastidial. El objetivo principal será evaluar la capacidad de distintos CDS para servir como zonas de amplicón (barcoding): medir variabilidad entre especies, identificar zonas conservadas para diseño de cebadores y proponer loci candidatos para estudios de identificación y filogenia.
 
-Proyección del trabajo
+### Lenguajes y herramientas utilizados en el proyecto
+- Bash
+  Usado para automatización de flujos de trabajo, bucles de procesamiento masivo, conversión de formatos y ejecución encadenada de herramientas bioinformáticas.
+- Python 3
+  Lenguaje principal para scripts personalizados. Bibliotecas utilizadas:
+   - Biopython (módulos SeqIO, Entrez, AlignIO) — descarga desde NCBI, parsing de GenBank/FASTA, extracción precisa de regiones genéticas.
 
-- Compilar una lista de géneros de orquídeas y obtener las secuencias cloroplastidiales disponibles en NCBI para esos géneros.
-- Extraer todos los CDS de los genomas cloroplastidiales descargados y organizarlos por locus (un archivo FASTA por CDS con todas las muestras disponibles).
-- Realizar alineamientos múltiples locus-por-locus con MAFFT y calcular métricas de variabilidad (sitios variables, π, distancia media, % de identidad).
-- Identificar regiones conservadas que flanquean zonas variables y sugerir posiciones y longitudes de amplicones adecuados para diseño de cebadores.
-- Evaluar la capacidad de discriminación taxonómica de cada CDS mediante árboles filogenéticos construidos con IQ-TREE y análisis de monofilia/soportes.
-- Proporcionar recomendaciones finales de loci candidatos para códigos de barras en orquídeas, priorizando el equilibrio entre variabilidad, amplificabilidad y longitud.
+   - numpy: cálculos de distancias genéticas y diversidad nucleotídica (π).
+
 
 ## 🎯 Objetivos
 
 ### Objetivo general
-Se realizará un análisis géneros de orquídeas centrado en regiones codificantes (CDS) del genoma cloroplastidial. El objetivo principal será evaluar la capacidad de distintos CDS para servir como zonas de amplicón (barcoding): medir variabilidad entre especies, identificar zonas conservadas para diseño de cebadores y proponer loci candidatos para estudios de identificación y filogenia.
-
+Desarrollar un pipeline bioinformático para la extracción, evaluación y organización de secuencias de códigos de barras cloroplásticos estándar (rbcL, matK y trnH-psbA) a partir de genomas cloroplásticos completos públicos, con el fin de generar bases de referencia en formato FASTA de alta calidad, listas para su almacenamiento en NAS y uso en identificación molecular de muestras vegetales secuenciadas.
 
 ---
 
 ## 🧩 Datos y muestras
 
-- **Número de géneros esperados**: ~15–20  
-- **Número de especies por género**: variable (1–5, según disponibilidad en NCBI)  
+- **Número de géneros esperados**: ~ 5  
+- **Número de especies por género**: variable (1–5, según disponibilidad en NCBI) 
 - **Tipo de datos**: Genomas cloroplastidiales completos (FASTA)  
 - **Fuente**: NCBI GenBank  
 
 ---
 
-## ⚙️ Metodología y pipeline
+## ⚙️ Lenguajes y herramientas utilizados en el proyecto
 
 ### Etapas principales:
 1. **Descarga de datos**
@@ -49,6 +50,6 @@ Se realizará un análisis géneros de orquídeas centrado en regiones codifican
 8. **Identificación de regiones candidatas para amplicones**
    - Analizar ventanas deslizantes para localizar zonas conservadas (cebadores) y regiones internas variables (discriminación).
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/4368c929-1083-434f-a58c-f4bfbdcd0cca" />
+
 
 ---
