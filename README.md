@@ -39,3 +39,14 @@ Desarrollar un pipeline bioinformático para la extracción, evaluación y organ
 - Python / Biopython — automatización de descargas, PCR in silico y análisis comparativos
 
 ---
+
+## Scripts incluidos
+
+| Script                             | Función                                                                                      |
+|-----------------------------------|----------------------------------------------------------------------------------------------|
+| descarga.py                       | Obtener los genomas clorplastidiales de los generos de interes                               |
+| extraer_rois.py                   | Extraer los ROI's de interes de manera simultanea                                            |
+| diversidad.py                     | Cuantificar la variabilidad genética intra e inter-taxon para cada marcador                  |
+| rois_to_fasta.sh                  | Unificación de comandos en un archivo bash                                                   |
+
+
