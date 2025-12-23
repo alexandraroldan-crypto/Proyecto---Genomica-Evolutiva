@@ -1,10 +1,11 @@
+
 ## Descargar genomas cloroplastidiales
 
-python ../ROIS/descarga.py
+python descarga.py
 
 ## Obtencion de Rois
 
-python ../ROIS/extraer_rois.py
+python extraer_rois.py
 
 
 mkdir diversidad
@@ -15,7 +16,7 @@ done
 
 
 ## Datos de parametos de Roi's
-python ../ROIS/diversidad.py
+python diversidad.py
 
 mkdir alineados
 for gen in rbcL matK trnH-psbA; do
@@ -29,7 +30,23 @@ done
 # Usa script para concatenar alineados (mantén IDs consistentes)
 python -c "from Bio.AlignIO import MultipleSeqAlignment; from Bio import AlignIO; alns = [AlignIO.read(f, 'fasta') for f in glob.glob('alineados/*_alineado.fasta')]; concat = MultipleSeqAlignment([]); for aln in alns: concat += aln; AlignIO.write(concat, 'filogenia/concatenado.fasta', 'fasta')"
 
-mkdir filogenia
-iqtree2 -s alineados/todos_rbcL_alineado.fasta -m MFP -B 1000 -T AUTO -pre filogenia/rbcL_tree
-# Repite por otros genes o concatenado
+
+mkdir -p filogenia
+
+for alineado in alineados/*_alineado.fasta; do
+    # Extrae el nombre del marcador (ej: rbcL, matK, trnH-psbA)
+    marcador=$(basename "$alineado" _alineado.fasta | sed 's/todos_//')
+
+    echo "Construyendo árbol para $marcador..."
+
+    iqtree2 -s "$alineado" \
+            -m MFP \
+            -B 1000 \
+            -T AUTO \
+            --prefix filogenia/${marcador}_tree
+done
+
+
+
+python arbol.py
 
