@@ -1,0 +1,24 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=4;
+TAXLABELS
+[1] 'Dracula_2624655981|rbcL'
+[2] 'Dracula_2624656068|rbcL'
+[3] 'Odontoglossum_281188264|rbcL'
+[4] 'Odontoglossum_295311711|rbcL'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=4 nsplits=5;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 4,
+	100	 1 2,
+	100	 1,
+;
+END; [Splits]
+

@@ -1,0 +1,302 @@
+IQ-TREE multicore version 2.0.7 for Linux 64-bit built Jan 21 2022
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    luciernaga-Aspire-E5-471 (AVX2, FMA3, 5 GB RAM)
+Command: iqtree2 -s alineados/todos_rbcL_alineado_alineado.fasta -m MFP -B 1000 -T AUTO --prefix filogenia/rbcL_alineado_tree
+Seed:    116969 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Dec 23 12:00:29 2025
+Kernel:  AVX+FMA - auto-detect threads (4 CPU cores detected)
+
+Reading alignment file alineados/todos_rbcL_alineado_alineado.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 10 sequences with 1452 columns, 15 distinct patterns
+23 parsimony-informative, 0 singleton sites, 1429 constant sites
+                              Gap/Ambiguity  Composition  p-value
+   1  Dracula_2624655981|rbcL         0.00%    passed     99.93%
+   2  Dracula_2624656068|rbcL         0.00%    passed     99.93%
+   3  Dracula_2647482796|rbcL         0.00%    passed     99.93%
+   4  Dracula_2666673057|rbcL         0.00%    passed     99.93%
+   5  Dracula_2666673144|rbcL         0.00%    passed     99.93%
+   6  Dracula_2692944096|rbcL         0.00%    passed     99.93%
+   7  Odontoglossum_281188264|rbcL    0.62%    passed     99.77%
+   8  Odontoglossum_295311711|rbcL    0.62%    passed     99.77%
+   9  Odontoglossum_694174762|rbcL    0.62%    passed     99.77%
+  10  Odontoglossum_944543168|rbcL    0.62%    passed     99.77%
+****  TOTAL                           0.25%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Dracula_2624656068|rbcL is identical to Dracula_2624655981|rbcL but kept for subsequent analysis
+NOTE: Odontoglossum_295311711|rbcL is identical to Odontoglossum_281188264|rbcL but kept for subsequent analysis
+NOTE: 6 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Dracula_2647482796|rbcL (identical to Dracula_2624655981|rbcL) is ignored but added at the end
+NOTE: Dracula_2666673057|rbcL (identical to Dracula_2624655981|rbcL) is ignored but added at the end
+NOTE: Dracula_2666673144|rbcL (identical to Dracula_2624655981|rbcL) is ignored but added at the end
+NOTE: Dracula_2692944096|rbcL (identical to Dracula_2624655981|rbcL) is ignored but added at the end
+NOTE: Odontoglossum_694174762|rbcL (identical to Odontoglossum_281188264|rbcL) is ignored but added at the end
+NOTE: Odontoglossum_944543168|rbcL (identical to Odontoglossum_281188264|rbcL) is ignored but added at the end
+Alignment was printed to filogenia/rbcL_alineado_tree.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to filogenia/rbcL_alineado_tree.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Measuring multi-threading efficiency up to 4 CPU cores
+Increase to 10 rounds for branch lengths
+12807 trees examined
+Threads: 1 / Time: 4.000 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -2250
+WARNING: 2 threads for alignment length 15 will slow down analysis
+Threads: 2 / Time: 2.488 sec / Speedup: 1.608 / Efficiency: 80% / LogL: -2250
+WARNING: 3 threads for alignment length 15 will slow down analysis
+Threads: 3 / Time: 2.856 sec / Speedup: 1.401 / Efficiency: 47% / LogL: -2250
+BEST NUMBER OF THREADS: 2
+
+WARNING: 2 threads for alignment length 15 will slow down analysis
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -2119.122
+Optimal log-likelihood: -2119.122
+Rate parameters:  A-C: 7.10896  A-G: 33.23134  A-T: 14.30754  C-G: 0.00010  C-T: 99.99848  G-T: 1.00000
+Base frequencies:  A: 0.283  C: 0.185  G: 0.245  T: 0.287
+Proportion of invariable sites: 0.492
+Gamma shape alpha: 998.441
+Parameters optimization took 1 rounds (0.002 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Time for fast ML tree search: 0.010 seconds
+
+NOTE: ModelFinder requires 0 MB RAM!
+ModelFinder will test up to 286 DNA models (sample size: 1452) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+WARNING: 2 threads for alignment length 15 will slow down analysis
+  1  GTR+F         2119.103     13  4264.206     4264.460     4332.855
+WARNING: 2 threads for alignment length 15 will slow down analysis
+  2  GTR+F+I       2119.103     14  4266.206     4266.499     4340.136
+WARNING: 2 threads for alignment length 15 will slow down analysis
+  3  GTR+F+G4      2119.103     14  4266.206     4266.499     4340.136
+WARNING: 2 threads for alignment length 15 will slow down analysis
+  4  GTR+F+I+G4    2119.119     15  4268.238     4268.573     4347.449
+WARNING: 2 threads for alignment length 15 will slow down analysis
+  5  GTR+F+R2      2119.111     15  4268.222     4268.556     4347.432
+WARNING: 2 threads for alignment length 15 will slow down analysis
+  6  GTR+F+R3      2119.114     17  4272.227     4272.654     4361.999
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 14  SYM           2139.763     10  4299.525     4299.678     4352.332
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 15  SYM+I         2139.765     11  4301.530     4301.713     4359.617
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 16  SYM+G4        2139.763     11  4301.526     4301.709     4359.614
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 27  TVM+F         2121.536     12  4267.073     4267.289     4330.441
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 28  TVM+F+I       2121.536     13  4269.072     4269.325     4337.721
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 29  TVM+F+G4      2121.536     13  4269.072     4269.325     4337.721
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 40  TVMe          2141.528     9   4301.055     4301.180     4348.582
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 41  TVMe+I        2141.528     10  4303.057     4303.209     4355.864
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 42  TVMe+G4       2141.528     10  4303.055     4303.208     4355.862
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 53  TIM3+F        2121.405     11  4264.810     4264.993     4322.897
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 54  TIM3+F+I      2121.405     12  4266.811     4267.027     4330.179
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 55  TIM3+F+G4     2121.405     12  4266.810     4267.027     4330.179
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 66  TIM3e         2142.249     8   4300.499     4300.598     4342.744
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 67  TIM3e+I       2142.244     9   4302.488     4302.613     4350.015
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 68  TIM3e+G4      2142.245     9   4302.490     4302.615     4350.016
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 79  TIM2+F        2119.396     11  4260.792     4260.975     4318.880
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 80  TIM2+F+I      2119.396     12  4262.792     4263.009     4326.160
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 81  TIM2+F+G4     2119.396     12  4262.792     4263.009     4326.160
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 92  TIM2e         2140.220     8   4296.441     4296.541     4338.686
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 93  TIM2e+I       2140.221     9   4298.443     4298.568     4345.969
+WARNING: 2 threads for alignment length 15 will slow down analysis
+ 94  TIM2e+G4      2140.221     9   4298.442     4298.567     4345.968
+WARNING: 2 threads for alignment length 15 will slow down analysis
+105  TIM+F         2121.089     11  4264.178     4264.361     4322.265
+WARNING: 2 threads for alignment length 15 will slow down analysis
+106  TIM+F+I       2121.071     12  4266.143     4266.360     4329.511
+WARNING: 2 threads for alignment length 15 will slow down analysis
+107  TIM+F+G4      2121.073     12  4266.147     4266.363     4329.515
+WARNING: 2 threads for alignment length 15 will slow down analysis
+118  TIMe          2142.040     8   4300.080     4300.179     4342.325
+WARNING: 2 threads for alignment length 15 will slow down analysis
+119  TIMe+I        2142.040     9   4302.081     4302.205     4349.607
+WARNING: 2 threads for alignment length 15 will slow down analysis
+120  TIMe+G4       2142.040     9   4302.080     4302.205     4349.606
+WARNING: 2 threads for alignment length 15 will slow down analysis
+131  TPM3u+F       2123.835     10  4267.670     4267.822     4320.477
+WARNING: 2 threads for alignment length 15 will slow down analysis
+132  TPM3u+F+I     2123.811     11  4269.621     4269.805     4327.709
+WARNING: 2 threads for alignment length 15 will slow down analysis
+133  TPM3u+F+G4    2123.816     11  4269.631     4269.814     4327.719
+WARNING: 2 threads for alignment length 15 will slow down analysis
+144  TPM3+F        2123.835     10  4267.670     4267.822     4320.477
+WARNING: 2 threads for alignment length 15 will slow down analysis
+145  TPM3+F+I      2123.811     11  4269.621     4269.805     4327.709
+WARNING: 2 threads for alignment length 15 will slow down analysis
+146  TPM3+F+G4     2123.816     11  4269.631     4269.814     4327.719
+WARNING: 2 threads for alignment length 15 will slow down analysis
+157  TPM2u+F       2121.758     10  4263.517     4263.670     4316.324
+WARNING: 2 threads for alignment length 15 will slow down analysis
+158  TPM2u+F+I     2121.731     11  4265.461     4265.644     4323.549
+WARNING: 2 threads for alignment length 15 will slow down analysis
+159  TPM2u+F+G4    2121.730     11  4265.460     4265.643     4323.548
+WARNING: 2 threads for alignment length 15 will slow down analysis
+170  TPM2+F        2121.729     10  4263.457     4263.610     4316.264
+WARNING: 2 threads for alignment length 15 will slow down analysis
+171  TPM2+F+I      2121.729     11  4265.457     4265.641     4323.545
+WARNING: 2 threads for alignment length 15 will slow down analysis
+172  TPM2+F+G4     2121.729     11  4265.457     4265.641     4323.545
+WARNING: 2 threads for alignment length 15 will slow down analysis
+183  K3Pu+F        2123.521     10  4267.042     4267.194     4319.849
+WARNING: 2 threads for alignment length 15 will slow down analysis
+184  K3Pu+F+I      2123.499     11  4268.997     4269.180     4327.085
+WARNING: 2 threads for alignment length 15 will slow down analysis
+185  K3Pu+F+G4     2123.503     11  4269.006     4269.189     4327.093
+WARNING: 2 threads for alignment length 15 will slow down analysis
+196  K3P           2143.795     7   4301.591     4301.668     4338.555
+WARNING: 2 threads for alignment length 15 will slow down analysis
+197  K3P+I         2143.800     8   4303.600     4303.700     4345.846
+WARNING: 2 threads for alignment length 15 will slow down analysis
+198  K3P+G4        2143.795     8   4303.590     4303.690     4345.836
+WARNING: 2 threads for alignment length 15 will slow down analysis
+209  TN+F          2121.592     10  4263.184     4263.337     4315.991
+WARNING: 2 threads for alignment length 15 will slow down analysis
+210  TN+F+I        2121.592     11  4265.185     4265.368     4323.272
+WARNING: 2 threads for alignment length 15 will slow down analysis
+211  TN+F+G4       2121.592     11  4265.183     4265.367     4323.271
+WARNING: 2 threads for alignment length 15 will slow down analysis
+222  TNe           2142.562     7   4299.124     4299.201     4336.088
+WARNING: 2 threads for alignment length 15 will slow down analysis
+223  TNe+I         2142.561     8   4301.121     4301.221     4343.367
+WARNING: 2 threads for alignment length 15 will slow down analysis
+224  TNe+G4        2142.561     8   4301.121     4301.221     4343.367
+WARNING: 2 threads for alignment length 15 will slow down analysis
+235  HKY+F         2124.017     9   4266.034     4266.159     4313.560
+WARNING: 2 threads for alignment length 15 will slow down analysis
+236  HKY+F+I       2124.004     10  4268.008     4268.161     4320.815
+WARNING: 2 threads for alignment length 15 will slow down analysis
+237  HKY+F+G4      2124.005     10  4268.011     4268.163     4320.818
+WARNING: 2 threads for alignment length 15 will slow down analysis
+248  K2P           2144.318     6   4300.637     4300.695     4332.321
+WARNING: 2 threads for alignment length 15 will slow down analysis
+249  K2P+I         2144.317     7   4302.635     4302.712     4339.600
+WARNING: 2 threads for alignment length 15 will slow down analysis
+250  K2P+G4        2144.318     7   4302.635     4302.713     4339.600
+WARNING: 2 threads for alignment length 15 will slow down analysis
+261  F81+F         2136.082     8   4288.164     4288.263     4330.409
+WARNING: 2 threads for alignment length 15 will slow down analysis
+262  F81+F+I       2136.082     9   4290.164     4290.288     4337.690
+WARNING: 2 threads for alignment length 15 will slow down analysis
+263  F81+F+G4      2136.082     9   4290.164     4290.288     4337.690
+WARNING: 2 threads for alignment length 15 will slow down analysis
+274  JC            2156.186     5   4322.371     4322.413     4348.775
+WARNING: 2 threads for alignment length 15 will slow down analysis
+275  JC+I          2156.186     6   4324.371     4324.429     4356.056
+WARNING: 2 threads for alignment length 15 will slow down analysis
+276  JC+G4         2156.186     6   4324.371     4324.429     4356.056
+Akaike Information Criterion:           TIM2+F
+Corrected Akaike Information Criterion: TIM2+F
+Bayesian Information Criterion:         HKY+F
+Best-fit model: HKY+F chosen according to BIC
+
+All model information printed to filogenia/rbcL_alineado_tree.model.gz
+CPU time for ModelFinder: 8.785 seconds (0h:0m:8s)
+Wall-clock time for ModelFinder: 9.559 seconds (0h:0m:9s)
+Generating 1000 samples for ultrafast bootstrap (seed: 116969)...
+WARNING: 2 threads for alignment length 15 will slow down analysis
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -2124.017
+Optimal log-likelihood: -2124.017
+Rate parameters:  A-C: 1.00000  A-G: 9.92345  A-T: 1.00000  C-G: 1.00000  C-T: 9.92345  G-T: 1.00000
+Base frequencies:  A: 0.283  C: 0.185  G: 0.245  T: 0.287
+Parameters optimization took 1 rounds (0.001 sec)
+Computing ML distances based on estimated model parameters... 0.000 sec
+Computing BIONJ tree...
+0.000 seconds
+Log-likelihood of BIONJ tree: -2124.014
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.032 second
+Computing log-likelihood of 2 initial trees ... 0.000 seconds
+Current best score: -2124.014
+
+Do NNI search on 3 best initial trees
+Finish initializing candidate tree set (3)
+Current best tree score: -2124.014 / CPU time: 0.050
+Number of iterations: 3
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 10 / LogL: -2124.023 / Time: 0h:0m:0s
+Iteration 20 / LogL: -2254.761 / Time: 0h:0m:0s
+Iteration 30 / LogL: -2254.761 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -2124.024 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -2254.761 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -2124.322
+Iteration 60 / LogL: -2124.023 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -2254.761 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -2124.024 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 90 / LogL: -2124.017 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 100 / LogL: -2254.761 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -2124.322
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2124.014
+Optimal log-likelihood: -2124.014
+Rate parameters:  A-C: 1.00000  A-G: 9.91923  A-T: 1.00000  C-G: 1.00000  C-T: 9.91923  G-T: 1.00000
+Base frequencies:  A: 0.283  C: 0.185  G: 0.245  T: 0.287
+Parameters optimization took 1 rounds (0.001 sec)
+BEST SCORE FOUND : -2124.014
+Creating bootstrap support values...
+Split supports printed to NEXUS file filogenia/rbcL_alineado_tree.splits.nex
+Total tree length: 0.016
+
+Total number of iterations: 101
+CPU time used for tree search: 1.674 sec (0h:0m:1s)
+Wall-clock time used for tree search: 1.290 sec (0h:0m:1s)
+Total CPU time used: 1.747 sec (0h:0m:1s)
+Total wall-clock time used: 1.366 sec (0h:0m:1s)
+
+Computing bootstrap consensus tree...
+Reading input file filogenia/rbcL_alineado_tree.splits.nex...
+4 taxa and 5 splits.
+Consensus tree written to filogenia/rbcL_alineado_tree.contree
+Reading input trees file filogenia/rbcL_alineado_tree.contree
+Log-likelihood of consensus tree: -2124.025
+
+Analysis results written to: 
+  IQ-TREE report:                filogenia/rbcL_alineado_tree.iqtree
+  Maximum-likelihood tree:       filogenia/rbcL_alineado_tree.treefile
+  Likelihood distances:          filogenia/rbcL_alineado_tree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          filogenia/rbcL_alineado_tree.splits.nex
+  Consensus tree:                filogenia/rbcL_alineado_tree.contree
+  Screen log file:               filogenia/rbcL_alineado_tree.log
+
+Date and Time: Tue Dec 23 12:00:40 2025
