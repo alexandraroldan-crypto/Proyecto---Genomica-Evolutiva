@@ -1,6 +1,6 @@
 # Proyecto---Genomica-Evolutiva
 
-## Pipeline bioinformático para la extracción y organización de secuencias degeneración de bases de referencia FASTA de códigos de barras cloroplásticos en plantas
+## Pipeline bioinformático para la selección de regiones de interés y preparación de referencias para Nanopore Adaptive Sampling
 Se realizará un análisis evolutivo de géneros de orquídeas centrado en regiones codificantes (CDS) del genoma cloroplastidial. El objetivo principal será evaluar la capacidad de distintos CDS para servir como zonas de amplicón (barcoding): medir variabilidad entre especies, identificar zonas conservadas para diseño de cebadores y proponer loci candidatos para estudios de identificación y filogenia.
 
 ---
